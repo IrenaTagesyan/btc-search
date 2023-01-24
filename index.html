@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTC Search</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.STONLY_WID = "";
+    </script>
+    <script>
+      !(function (s, t, o, n, l, y, w, g) {
+        s.StonlyWidget ||
+          (((w = s.StonlyWidget =
+            function () {
+              w._api ? w._api.apply(w, arguments) : w.queue.push(arguments);
+            }).scriptPath = n),
+          (w.queue = []),
+          ((y = t.createElement(o)).async = !0),
+          (g = new XMLHttpRequest()).open(
+            "GET",
+            n + "version?v=" + Date.now(),
+            !0
+          ),
+          (g.onreadystatechange = function () {
+            4 === g.readyState &&
+              ((y.src =
+                n +
+                "stonly-widget.js?v=" +
+                (200 === g.status ? g.responseText : Date.now())),
+              (l = t.getElementsByTagName(o)[0]).parentNode.insertBefore(y, l));
+          }),
+          g.send());
+      })(window, document, "script");
+    </script>
+  </head>
+  <body>
+    <div class="c">
+      <div class="h">
+        <h1>Bitcoin Search</h1>
+      </div>
+      <form id="f">
+        <div class="x">
+          <label for="ba">Check Address Balance</label>
+          <input
+            type="text"
+            id="ba"
+            name="bitcoincheck"
+            placeholder="Enter Bitcoin Address"
+            class="st"
+            autocomplete="off"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            class="check-cicrle"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            class="exclamation"
+          />
+
+          <small>Error message</small>
+          <div class="balance" style="display: flex">Total Balance:</div>
+        </div>
+        <input type="submit" value="Submit" class="sb" />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
